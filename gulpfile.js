@@ -33,6 +33,4 @@ function comprimeJavascript() {
 }
 
 // Exporta as funções para uso no terminal
-exports.sass = compilaSass;
-exports.images = comprimeImagens;
-exports.javascript = comprimeJavascript;
+exports.default = gulp.series(compilaSass, comprimeImagens, comprimeJavascript);    
